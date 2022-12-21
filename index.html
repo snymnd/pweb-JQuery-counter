@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Counter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div>
+                <a href="#intro" class="my">MY</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main h-[50vh]" >
+        <div class="flex  flex justify-center gap-x-8 items-center">
+            <button class=" minus text-2xl btn w-fit hover:scale-105 ">-</button>
+            <span id="counter" class="text-6xl mx-5">0</span>
+            <button class="plus btn w-fit text-2xl hover:scale-105">+</button>
+        </div>
+    </main>
+
+
+    <footer >
+        <span >© 2022 Muhammad Yunus</span>
+        <ul >
+            <li></li>
+            <li>
+                <a href="https://www.instagram.com/snymnd/" class=" "><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/snymnd" class=""> <i class="fa fa-github"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/muhammad-yunus-68920021b/" class="mr-4 "><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+                <a href="mailto: muh.yunus310502@gmail.com" ><i class="fa fa-envelope "></i></a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        $(document).ready(function() {
+        var count = 0;
+        $(".plus").click(function() {
+            count++;
+            $("#counter").html(count);
+        });
+        $(".minus").click(function() {
+            count--;
+            $("#counter").html(count);
+        });
+        });
+    </script>
+</body>
+</html>
